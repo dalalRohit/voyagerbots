@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FIRE </title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/5.8.2/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/5.8.2/firebase-auth.js"></script>
+    <script defer src="/__/firebase/5.8.2/firebase-database.js"></script>
+    <script defer src="/__/firebase/5.8.2/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/5.8.2/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+</head>
+
+
+<body>
+    <p>
+        <h1>RED BOT</h1>
+    </p>
+    <input type="button" value="forward" id="forwardbtn">
+    <input type="button" value="backward" id="backbtn">
+    <input type="button" value="left" id="leftbtn">
+    <input type="button" value="right" id="rightbtn">
+    <a href="bluebot.html"><input type="button" value="change"></a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var db = firebase.database();
+            var rootref = db.ref("redbot");
+            // var forwardref = rootRef.child("f");
+            // var backref = rootRef.child("b");
+            // var rightref = rootRef.child("r");
+            // var leftref = rootRef.child("l");
+            document.getElementById("forwardbtn").addEventListener("click", (e) => {
+                let d = new Date();
+                let now = d.getTime();
+                rootref.push({
+                    direction: 'f',
+                    time: now
+                });
+            });
+            document.getElementById("backbtn").addEventListener("click", (e) => {
+                let d = new Date();
+                let now = d.getTime();
+                rootref.push({
+                    direction: 'b',
+                    time: now
+                });
+            });
+            document.getElementById("rightbtn").addEventListener("click", (e) => {
+                let d = new Date();
+                let now = d.getTime();
+                rootref.push({
+                    direction: 'r',
+                    time: now
+                });
+            });
+            document.getElementById("leftbtn").addEventListener("click", (e) => {
+                let d = new Date();
+                let now = d.getTime();
+                rootref.push({
+                    direction: 'l',
+                    time: now
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
