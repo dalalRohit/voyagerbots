@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FIRE </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDBOT </title>
 
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/5.8.2/firebase-app.js"></script>
@@ -15,18 +15,42 @@
     <script defer src="/__/firebase/5.8.2/firebase-storage.js"></script>
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/red.css">
 </head>
 
 
-<body>
-    <p>
-        <h1>RED BOT</h1>
-    </p>
-    <input type="button" value="forward" id="forwardbtn">
-    <input type="button" value="backward" id="backbtn">
-    <input type="button" value="left" id="leftbtn">
-    <input type="button" value="right" id="rightbtn">
-    <a href="bluebot.html"><input type="button" value="change"></a>
+<body class="red-container">
+    <h1 class="redbot">RED BOT</h1>
+
+    <div class="main container">
+
+        <div class="directions">
+            <div class="row">
+                <button id="forwardbtn">FORWARD</button>
+            </div>
+
+            <div class="row">
+                <button id="leftbtn">LEFT</button>
+                <button id="rightbtn">RIGHT</button>
+            </div>
+
+            <div class="row">
+                <button id="backbtn">BACKWARD</button>
+            </div>
+
+        </div>
+        <div class="change">
+            <a href="bluebot.html">
+                <button>CHANGE</button>
+            </a>
+        </div>
+    </div>
+
+
+
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
