@@ -1,0 +1,76 @@
+body{
+    background-color:#191919;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    color: whitesmoke;
+
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+button{
+    width:calc(20vw + 6px);
+    height:calc(8vw + 6px);
+    margin: 15px auto;
+    line-height: 1.4em;
+    cursor: pointer;
+    font-size:3vw;
+    font-weight:bold;
+    border-radius: 5px;
+}
+/* MAIN CONTENT */
+.redbot,.bluebot{
+    text-align: center;
+}
+
+.main{
+    width: 80%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 5vh 10% 10px 10%;
+    /* border: 1px solid #eee; */
+    box-sizing: border-box;
+}
+
+.directions{
+    box-sizing: border-box;
+    width: 80%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 10px 10% 10px 10%;
+    border: 1px solid #eee;
+    padding: 16px;
+}
+
+.change{
+    width: 20%;
+    max-width: 100%;
+    margin: 0 40% 0 40%;
+}
+
+/* BUTTON */
+.red-container button{
+    background-color: red;
+    border: 1px solid black;
+    color: white;
+
+}
+.blue-container button{
+    background-color: blue;
+    border: 1px solid black;
+    color: white;
+}
+
+.red-container .change button{
+    color: white;
+    background-color: blue;
+}
+.blue-container .change button{
+    color: white;
+    background-color:red;
+}
