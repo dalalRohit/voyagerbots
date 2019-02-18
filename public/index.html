@@ -15,25 +15,29 @@
   <script defer src="/__/firebase/5.8.2/firebase-storage.js"></script>
   <!-- initialize the SDK after all desired features are loaded -->
   <script defer src="/__/firebase/init.js"></script>
+  <link rel="stylesheet" href="./css/index.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
-  <style>
-    .red {
-      position: fixed;
-      top: 20%;
-      left: 45%;
-    }
-    .blue {
-      position: fixed;
-      bottom: 20%;
-      left: 45%;
-    }
-  </style>
 </head>
 
 <body>
-  <a href="redbot.html"><input type="button" class="red" value="RED"></a>
+  <h1 class="head">Choose your team</h1>
 
-  <a href="bluebot.html"><input type="button" class="blue" value="BLUE"></a>
+  <div class="main">
+    <div class="red-button">
+      <a href="redbot.html">
+        <button class="red">RED</button>
+      </a>
+
+    </div>
+    <div class="blue-button">
+      <a href="bluebot.html">
+        <button class="blue">BLUE</button>
+      </a>
+
+    </div>
+  </div>
+
 </body>
 
 </html>
